@@ -1,99 +1,109 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0039)https://view-parsing-network.github.io/ -->
-<html xmlns="http://www.w3.org/1999/xhtml" class="gr__physplus_csail_mit_edu gr__view-parsing-network_github_io"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- saved from url=(0042)https://ceyuan.me/SemanticHierarchyEmerge/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" class="gr__ceyuan_me"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <script src="./View_Parsing_Network_files/head.js"></script>        <meta name="viewport" content="width=device-width, initial-scale=1">    <link rel="shortcut icon" href="https://view-parsing-network.github.io/undefinedimages/favicon.ico">        
-    <meta name="viewport" content="width=device-width, initial-scale=1">    <link rel="shortcut icon" href="http://physplus.csail.mit.edu/images/favicon.ico">
-    <meta name="description" content="View_Parsing_Network">
-    <meta name="keywords" content="MIT,Vision,Scene Understanding,Learning,Computer Science">
+<title>View-Parsing-Network</title>
 
-    <title>View Parsing Network</title>
-    <link rel="stylesheet" href="./View_Parsing_Network_files/font.css">
-    <link rel="stylesheet" href="./View_Parsing_Network_files/main.css">
+  <link rel="stylesheet" href="./View_Parsing_Network_files/bootstrap.min.css">
+  <link href="./View_Parsing_Network_files/css" rel="stylesheet" type="text/css">
+  <link href="./View_Parsing_Network_files/style.css" rel="stylesheet" type="text/css">
+</head>
 
-  </head>
+<body data-gr-c-s-loaded="true"> 
 
-  <body data-gr-c-s-loaded="true">
+<div class="container">
+  <table border="0" align="center">
+    <tbody><tr>
+      <td width="700" align="center" valign="middle">
+      <span class="title"><h2>Cross-view Semantic Segmentation for Sensing Surroundings</h2></span></td>
+    </tr>
+    <tr>
+        <td colspan="3" align="center"><h3><a href="http://people.csail.mit.edu/bpan/" target="_blank">Bowen Pan<sup>1</sup></a>, <a href="http://jiankaisun.github.io/" target="_blank">Jiankai Sun<sup>2</sup></a>, <a href="https://www.alexandonian.com/" target="_blank">Alex Andonian<sup>1</sup></a>, <a href="http://bzhou.ie.cuhk.edu.hk/" target="_blank">Bolei Zhou<sup>2</sup></a> </h3></td>
+    </tr>
+    <tr>
+        <td colspan="3" align="center"><h3> <sup>1</sup> Massachusetts Institute of Technology </h3></td>
+    </tr>
+    <tr>
+        <td colspan="3" align="center"><h3 style="margin-top: 0px;"> <sup>2</sup> The Chinese University of Hong Kong</h3></td>
+    </tr>
+    <tr>
+        <td colspan="3" align="center"><h3> <a href="https://arxiv.org/pdf/1906.03560.pdf" target="_blank">[Paper]</a> <a href="https://github.com/pbw-Berwin/View-Parsing-Network" target="_blank">[Code]</a> <a href="./View_Parsing_Network_files/Supplementary_Material_VPN_v2.pdf" target="_blank">[Supplemental Materials]</a> </h3></td>
+    </tr>
+  </tbody></table>
+  <br>
+  <p><img src="./View_Parsing_Network_files/demo_fig_traffic.png" width="500" align="middle"></p>
+  <div class="text" style="text-align: left;">
+      <p>We introduce a novel spatial understanding task calls <strong>Cross-view Semantic Segmentation</strong>. In this task, top-down-view semantics are predicted from the first-view real-world observations. Input observations from multiple angles are fused together.</p>
+  </div>
+</div>
 
-    <div class="outercontainer">
-      <div class="container">
+<br>
 
-        <div class="content project_title">
-          <h1>Cross-view Semantic Segmentation for Sensing Surroundings</h1>
-
-          <p id="authors">
-          	<a href="http://people.csail.mit.edu/bpan/">Bowen Pan<sup>1</sup></a>,
-            <a href="https://jiankaisun.github.io/">Jiankai Sun<sup>2</sup></a>,
-  			<a href="https://www.alexandonian.com/">Alex Andonian<sup>1</sup></a>,
-  			<a href="http://bzhou.ie.cuhk.edu.hk/">Bolei Zhou<sup>2</sup></a><br>
-  			<sup>1</sup>Massachusetts Institute of Technology,  <sup>2</sup>The Chinese University of Hong Kong
-          </p>
-          <p>
-            [<a href="./View_Parsing_Network_files/VPN_v2_for_CVPR2020.pdf">PDF</a>] [<a href="https://arxiv.org/abs/1906.03560">arXiv</a>] [<a href="https://github.com/pbw-Berwin/View-Parsing-Network">Code</a>] [<a href="./View_Parsing_Network_files/Supplementary_Material_VPN_v2.pdf">Supplemental Materials</a>]
-          </p>
-        </div>
-              
-        <div class="content project_headline">
-          <div class="img" style="text-align:center">
-            <img class="img_responsive" src="./View_Parsing_Network_files/demo_fig_traffic.png" alt="Teaser" style="margin:auto;max-width:50%">
-          </div>
-          <div class="text">
-            <p>We introduce a novel spatial understanding task calls <strong>Cross-view Semantic Segmentation</strong>. In this task, top-down-view semantics are predicted from the first-view real-world observations. Input observations from multiple angles are fused together.</p>
-          </div>
-        </div>
-        
-        <h2 align='center'>Overview</h2>
-        <div align="center" style="text-align: left;">
-            <p>
-                In this framework, the View Parsing Network (VPN) is proposed to parse the first-view observations into a top-down-view semantic map indicating the spatial location of all the objects at pixel-level. The view transformer module contained in VPN is designed to aggregate the surrounding information collected from first-view observations in multiple angles and modalities. To mitigate the issue of lacking real-world annotations, we train the VPN in simulation environment and utilize the off-the-shelf domain adaptation technique to transfer it to real-world data. 
-                We evaluate our VPN on both synthetic and real-world data. The experimental results show that our model can effectively make use of the information from different views and multi-modalities. Thus the proposed VPN is able to accurately predict the top-down-view semantic mask of the visible objects as well as barely seen objects, in both synthetic and real-world environments.
-            </p>
-        </div>
-
-        <h3 align='center'>Pipelines</h3>
-        <div align="center" style="text-align: left;">
-            <div class="img" style="text-align:left">
-                <img class="img_responsive" src="./View_Parsing_Network_files/framework_full.png" alt="Teaser" style="margin:auto;max-width:80%">
-                <p>
-                    Framework of the View Parsing Network for cross-view semantic segmentation. The simulation part illustrates the architecture and training scheme of our VPN. And the real-world part demonstrates our domain adaptation process for transferring our VPN to the real world.
-                </p>
-            </div>
-        </div>
-
-        <div class="content">
-                    <div class="text">
-                        <!-- <h3>Preprint</h3> -->
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <ul>
-                                  	<h3>Paper</h3>
-              
-  							<div><a href="./View_Parsing_Network_files/VPN_v2_for_CVPR2020.pdf" target="_blank"><img src="./View_Parsing_Network_files/first-page.png" alt="" style="width: 50%; margin: -0.0000014107% 0 -0.0000014107% 0%"></a></div>
-              	<!-- <div class="jz"><a href="https://github.com/pbw-Berwin/View-Parsing-Network"><br>Code for training and testing <br> (Github Repo)</a></div> -->
-                </ul>
-                                   </td>
-                                    <td style="vertical-align:middle">
-                                        <h3>GIF Highlight (real-world results)</h3>
-                                        <div><img src="./View_Parsing_Network_files/ezgif.com-crop.gif" alt="" style="width: 100%; padding-bottom: 11%; padding-top: 11%; margin: -0.0000014107% 0 -0.0000014107% 0%"></div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-        </div>
-
-        <div align="center" style="padding-bottom: 10%;">
-          <h3>Demo Video</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/zyeHpdsLj5s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+<div class="container">
+  <h2>Overview</h2>
+    <div class="overview">
+    <p>
+        In this framework, the View Parsing Network (VPN) is proposed to parse the first-view observations into a top-down-view semantic map indicating the spatial location of all the objects at pixel-level. The view transformer module contained in VPN is designed to aggregate the surrounding information collected from first-view observations in multiple angles and modalities. To mitigate the issue of lacking real-world annotations, we train the VPN in simulation environment and utilize the off-the-shelf domain adaptation technique to transfer it to real-world data. 
+        We evaluate our VPN on both synthetic and real-world data. The experimental results show that our model can effectively make use of the information from different views and multi-modalities. Thus the proposed VPN is able to accurately predict the top-down-view semantic mask of the visible objects as well as barely seen objects, in both synthetic and real-world environments.
+    </p>
 
     </div>
-    </div>
+</div>
 
+<br>
+
+<div class="container">
+    <h2>Pipelines</h2>
+      <img class="img_responsive" src="./View_Parsing_Network_files/framework_full.png" alt="Teaser" style="margin:auto;max-width:80%">
+      <div class="pipelines" style="text-align: left;">
+        <p>
+          Framework of the View Parsing Network for cross-view semantic segmentation. The simulation part illustrates the architecture and training scheme of our VPN. And the real-world part demonstrates our domain adaptation process for transferring our VPN to the real world.
+        </p>
+      </div>
+</div>
   
 
+<br>
+
+<div class="container">
+  <h2>Demo Video</h2>
+    <div class="Demo video">
+    <!-- <p>
+    Identifying such a set of manipulatable latent variation factors facilitates semantic scene manipulation.
+    </p>
+    <table class="mt-10 text-center fs-18" width="100%" style="border-collapse: separate; border-spacing: 0px 10px">
+        <tbody><tr><td><img src="./View_Parsing_Network_files/demo_short.gif" width="80%"></td>
+    </tr></tbody></table>
+    <br> -->
+    <!-- <p>
+    Check more results of various scenes in the following video.
+    </p> -->
+
+    <div style="position: relative; padding-top: 50%; text-align: center">
+      <iframe src="https://www.youtube.com/embed/zyeHpdsLj5s" frameborder="0" style="position: absolute; top: 2.5%; left: 2.5%; width: 95%; height: 100%;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+    </div>
+    <br>
+  </div></div>
+    <p></p>
+    
 
 
-</body></html>
+<br>
+
+<div class="container">
+  <h2>Reference</h2>
+    <div class="overview">
+    <p>
+@article{pan2019crossview, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;title={Cross-view Semantic Segmentation for Sensing Surroundings}, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;author={Pan, Bowen and Sun, Jiankai and Andonian, Alex and Zhou, Bolei},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:1906.03560},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;year    = {2019}<br>
+}
+
+<br>
+
+<!--<p align="center" class="acknowledgement">Last updated: Jan. 6, 2017</p>-->
+
+
+</div></div></body></html>
